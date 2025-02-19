@@ -205,7 +205,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     font-weight: 900;
-    line-height: 100%;
+    
     overflow: hidden;
 }
 
@@ -258,7 +258,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 400;
-    line-height: 100%;
+    
 }
 
 .single_box div{
@@ -273,7 +273,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(12px, 3vw, 16px);
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
 }
 
 /* СТИЛИ ДЛЯ ВТОРОЙ СТРАНИЦЫ */
@@ -336,7 +336,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     font-weight: 400;
     overflow: hidden;
-    line-height: 100%;
+    
 }
 
 .small_dot {
@@ -505,7 +505,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     font-weight: 900;
-    line-height: 100%;
+    
     overflow: hidden;
 }
 
@@ -515,7 +515,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
     margin-top: 48px;
 }
 
@@ -524,7 +524,7 @@ body.no-scroll, html.no-scroll {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
+    
     overflow: hidden;
 }
 
@@ -562,7 +562,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 900;
-    line-height: 100%;
+    
 }
 
 .third-page h2{
@@ -572,7 +572,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     max-width: 50%;
     font-weight: 400;
-    line-height: normal;
+    
     margin-top: 48px;
 }
 
@@ -610,7 +610,6 @@ body.no-scroll, html.no-scroll {
     overflow: hidden;
     font-style: normal;
     font-weight: 500;
-    line-height: 110%;
 }
 
 .single-card ul {
@@ -626,11 +625,11 @@ body.no-scroll, html.no-scroll {
     align-items: flex-start;
     gap: 8px;
     color: #000;
-    font-size: clamp(12px, 2.5vw, 10px);
+    font-size: clamp(14px, 2.5vw, 16px);
 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
 }
 
 .single-card li::before {
@@ -723,7 +722,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 900;
-    line-height: 100%;
+    
 }
 
 .feedback-page h2{
@@ -733,7 +732,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     max-width: 50%;
     font-weight: 400;
-    line-height: normal;
+    
     margin-top: 48px;
 }
 
@@ -780,7 +779,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    
 }
 
 .feedback-card h5{
@@ -790,7 +789,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
     margin-top: 32px;
 }
 
@@ -821,7 +820,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 900;
-    line-height: 100%;
+    
 }
 
 .video-page h2{
@@ -830,7 +829,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     max-width: 50%;
     font-weight: 400;
-    line-height: normal;
+    
     margin-top: 48px;
 }
 
@@ -869,7 +868,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 900;
-    line-height: 100%;
+    
     font-family: "ALS Ekibastuz";
 }
 
@@ -949,7 +948,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(16px, 2.5vw, 20px);
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
     transition: all 0.2s ease-in;
 &:hover{
     opacity: 0.8;
@@ -972,7 +971,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
 }
 
 
@@ -991,7 +990,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 900;
-    line-height: 100%;
+    
 }
 
 .contacts-page section{
@@ -1017,7 +1016,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    
 }
 
 .contacts-page a{
@@ -1026,7 +1025,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease-in;

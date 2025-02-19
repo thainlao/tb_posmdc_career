@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const visibleDots = new Set();
     const minVisible = 15;
 
+    const vacancyBut = document.getElementById('vacancy-but');
+
     const vacancyLeftButton = document.getElementById('left_vacancy');
     const vacancyRightButton = document.getElementById('right_vacancy');
     const vacancyContainer = document.querySelector('.vacancy-cards');
@@ -21,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightButton2 = document.getElementById('right_but2');
     const cardsContainer = document.querySelector('.feedback-cards');
 
-    // Обработчик для первой группы кнопок
+    vacancyBut.addEventListener('click', () => {
+        window.location.href = "https://hh.ru/employer/5741205";
+    });
+    
     leftButton1.addEventListener('click', () => {
         cardsContainer.scrollBy({ left: -580, behavior: 'smooth' });
     });
@@ -30,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cardsContainer.scrollBy({ left: 580, behavior: 'smooth' });
     });
 
-    // Обработчик для второй группы кнопок
     leftButton2.addEventListener('click', () => {
         cardsContainer.scrollBy({ left: -340, behavior: 'smooth' });
     });
