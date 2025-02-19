@@ -1255,6 +1255,16 @@ footer{
         flex-direction: row;
         gap: 32px;
     }
+
+    .third-page h2{
+        text-align: center;
+        max-width: 80%;
+    }
+
+    .feedback-page h2{
+        text-align: center;
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 580px) {
