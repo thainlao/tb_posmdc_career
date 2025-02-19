@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dots = Array.from(document.querySelectorAll('.small_dot'));
     const visibleDots = new Set();
-    const minVisible = 5;
+    const minVisible = 15;
 
     const vacancyLeftButton = document.getElementById('left_vacancy');
     const vacancyRightButton = document.getElementById('right_vacancy');
