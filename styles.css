@@ -5,12 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'posmdc_font';
+}
+
+@font-face {
+    font-family: 'posmdc_font';
+    src: url('./assets/ALS_Ekibastuz_Extra\ Black_1.01.otf');
 }
 
 html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    font-family: Inter, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -122,6 +127,7 @@ html, body {
     transform: translate(-50%, -50%);
     font-size: 40px;
     cursor: pointer;
+    font-family: Inter, sans-serif !important;
     color: rgb(15, 15, 15);
     z-index: 2;
 }
@@ -158,10 +164,12 @@ body.no-scroll, html.no-scroll {
 .mainpage header a, .mainpage-footer a {
     text-align: center;
     white-space: nowrap;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
     overflow: hidden;
 }
 
@@ -192,10 +200,12 @@ body.no-scroll, html.no-scroll {
     text-align: center;
     font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     border-radius: 20px;
     border: 1px solid #FFF;
     margin-bottom: 48px;
     padding: 8px 16px;
+    margin-top: 36px;
     overflow: hidden;
 }
 
@@ -258,7 +268,7 @@ body.no-scroll, html.no-scroll {
     font-style: normal;
     overflow: hidden;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
 }
 
 .single_box div{
@@ -273,7 +283,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(12px, 3vw, 16px);
     font-style: normal;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
 }
 
 /* СТИЛИ ДЛЯ ВТОРОЙ СТРАНИЦЫ */
@@ -335,6 +345,7 @@ body.no-scroll, html.no-scroll {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     overflow: hidden;
     
 }
@@ -504,8 +515,7 @@ body.no-scroll, html.no-scroll {
     color: #000;
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
-    font-weight: 900;
-    
+    font-weight: 100;
     overflow: hidden;
 }
 
@@ -515,6 +525,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     
     margin-top: 48px;
 }
@@ -524,6 +535,7 @@ body.no-scroll, html.no-scroll {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     
     overflow: hidden;
 }
@@ -561,17 +573,16 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     overflow: hidden;
-    font-weight: 900;
-    
+    font-weight: 100;
 }
 
 .third-page h2{
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 400;
+    font-family: Inter, sans-serif !important;
 
     font-style: normal;
     max-width: 50%;
-    font-weight: 400;
     
     margin-top: 48px;
 }
@@ -610,6 +621,7 @@ body.no-scroll, html.no-scroll {
     overflow: hidden;
     font-style: normal;
     font-weight: 500;
+    font-family: Inter, sans-serif !important;
 }
 
 .single-card ul {
@@ -626,10 +638,9 @@ body.no-scroll, html.no-scroll {
     gap: 8px;
     color: #000;
     font-size: clamp(14px, 2.5vw, 16px);
-
     font-style: normal;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
 }
 
 .single-card li::before {
@@ -721,17 +732,16 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     overflow: hidden;
-    font-weight: 900;
-    
+    font-weight: 100;
 }
 
 .feedback-page h2{
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 400;
+    font-family: Inter, sans-serif !important;
 
     font-style: normal;
     max-width: 50%;
-    font-weight: 400;
     
     margin-top: 48px;
 }
@@ -775,7 +785,7 @@ body.no-scroll, html.no-scroll {
 
 .card-info h4{
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-family: Inter, sans-serif !important;
 
     font-style: normal;
     font-weight: 500;
@@ -785,12 +795,11 @@ body.no-scroll, html.no-scroll {
 .feedback-card h5{
     color: #000;
     font-family: Inter;
-    font-size: clamp(16px, 2.5vw, 20px);
-
-    font-style: normal;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
+    font-style: normal;
     margin-top: 32px;
+    font-size: 20px;
 }
 
 .card-info img{
@@ -819,13 +828,13 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     overflow: hidden;
-    font-weight: 900;
-    
+    font-weight: 100;
 }
 
 .video-page h2{
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 400;
+    font-family: Inter, sans-serif !important;
     font-style: normal;
     max-width: 50%;
     font-weight: 400;
@@ -867,9 +876,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     overflow: hidden;
-    font-weight: 900;
-    
-    font-family: "ALS Ekibastuz";
+    font-weight: 100;
 }
 
 .vacancy-buttons {
@@ -933,6 +940,77 @@ body.no-scroll, html.no-scroll {
     transition: all 0.5s ease;
 }
 
+.card-inner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+}
+
+.card-inner-logo {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.inner-card-a {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+}
+
+.vacancy-card img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    object-fit: contain;
+    cursor: pointer;
+&:hover{
+    transform: rotate(10deg);
+    opacity: 0.8;
+}}
+
+.vacancy-card h5{
+    color: #000;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-style: normal;
+    overflow: hidden;
+    font-weight: 500;
+    font-family: Inter, sans-serif !important;
+    margin-top: 10px;
+}
+
+.card-link{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #1EC3A5;
+    cursor: pointer;
+    height: 50px;
+    align-self: stretch;
+    color: #FFF;
+    border: none;
+    font-weight: 400;
+    font-family: Inter, sans-serif !important;
+    font-style: normal;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+&:hover{
+    opacity: 0.8;
+}}
+
+.vacancy-card h2{
+    color: black;
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-family: Inter, sans-serif !important;
+}
+
 .vacancy-card button{
     display: flex;
     width: 100%;
@@ -945,10 +1023,9 @@ body.no-scroll, html.no-scroll {
     align-self: stretch;
     color: #FFF;
     border: none;
-    font-size: clamp(16px, 2.5vw, 20px);
-    font-style: normal;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
+    font-style: normal;
     transition: all 0.2s ease-in;
 &:hover{
     opacity: 0.8;
@@ -963,15 +1040,27 @@ body.no-scroll, html.no-scroll {
 }
 
 .vacancy-card li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    position: relative;
+    padding-left: 20px;
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
-
-    font-style: normal;
     font-weight: 400;
-    
+    font-family: Inter, sans-serif !important;
+    font-style: normal;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.vacancy-card li::after {
+    content: "";
+    position: absolute;
+    left: 0; 
+    top: 10px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
 }
 
 
@@ -989,8 +1078,7 @@ body.no-scroll, html.no-scroll {
     font-size: clamp(24px, 5vw, 64px);
     font-style: normal;
     overflow: hidden;
-    font-weight: 900;
-    
+    font-weight: 100;
 }
 
 .contacts-page section{
@@ -1012,7 +1100,8 @@ body.no-scroll, html.no-scroll {
 
 .contacts-page h2{
     color: #000;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 400;
+    font-family: Inter, sans-serif !important;
 
     font-style: normal;
     font-weight: 600;
@@ -1025,6 +1114,7 @@ body.no-scroll, html.no-scroll {
 
     font-style: normal;
     font-weight: 400;
+    font-family: Inter, sans-serif !important;
     
     text-decoration: none;
     cursor: pointer;
@@ -1039,6 +1129,24 @@ footer{
 
 
 /* MEDIA MEDIA MEDIA  */
+@media (max-width: 870px) {
+    .mainpage header{
+        justify-content: center;
+    }
+
+    .header_right{
+        display: none;
+    }
+    
+    .mainpage-footer{
+        display: block;
+        position: absolute;
+        bottom: 42px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+}
 
 @media (max-width: 768px) {
     .contacts-page {
@@ -1098,6 +1206,9 @@ footer{
         align-items: center;
         border-radius: 12px;
         color: #1EC3A5;
+        font-weight: 400;
+        background-color: transparent;
+        font-family: Inter, sans-serif !important;
         border: 1px solid #1EC3A5;
         margin-top: 40px;
         margin-bottom: 60px;
@@ -1241,23 +1352,6 @@ footer{
 
     .second-profs{
         grid-template-columns: repeat(2, auto);
-    }
-
-    .mainpage header{
-        justify-content: center;
-    }
-
-    .header_right{
-        display: none;
-    }
-    
-    .mainpage-footer{
-        display: block;
-        position: absolute;
-        bottom: 42px;
-        display: flex;
-        flex-direction: row;
-        gap: 32px;
     }
 
     .third-page h2{
