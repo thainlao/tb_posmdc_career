@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
-
+    
     function getRandomDots(array, count) {
         let shuffled = [...array].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, count);
@@ -147,47 +147,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // вакансии
-    const vacancyArray = document.querySelector(".vacancy-cards");
-    fetch('https://api.hh.ru/vacancies?employer_id=5741205')
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`Ошибка HTTP: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        console.log(data.items);
+    function fetchVacancies() {
+        const vacancyArray = document.querySelector(".vacancy-cards");
+        
+        fetch('https://api.hh.ru/vacancies?employer_id=5741205')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            vacancyArray.innerHTML = '';
+            data.items.forEach(vacancy => {
+                const vacancyCard = document.createElement("div");
+                vacancyCard.classList.add("vacancy-card");
 
-        vacancyArray.innerHTML = '';
-        data.items.forEach(vacancy => {
-            const vacancyCard = document.createElement("div");
-            vacancyCard.classList.add("vacancy-card");
-
-            vacancyCard.innerHTML = `
-                <div>
-                    <div class='card-inner-logo'>
-                        <div class='card-inner-text'>
-                            <h2>${vacancy.name}</h2>
-                            <h5>от ${new Intl.NumberFormat('ru-RU').format(vacancy.salary.from)}, ${vacancy.address.city}</h5>
+                vacancyCard.innerHTML = `
+                    <div>
+                        <div class='card-inner-logo'>
+                            <div class='card-inner-text'>
+                                <h2>${vacancy.name}</h2>
+                                <h5>от ${new Intl.NumberFormat('ru-RU').format(vacancy.salary.from)}, ${vacancy.address.city}</h5>
+                            </div>
+                            <a class='inner-card-a' href="${vacancy.alternate_url}" target="_blank">
+                                <img src='./assets/hhlogo.png' />
+                            </a>
                         </div>
-                        <a class='inner-card-a' href="${vacancy.alternate_url}" target="_blank">
-                            <img src='./assets/hhlogo.png' />
-                        </a>
+                        <ul>
+                            <li>${vacancy.snippet.requirement ? vacancy.snippet.requirement : ""}</li>
+                            <li>${vacancy.snippet.responsibility ? vacancy.snippet.responsibility : ""}</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>${vacancy.snippet.requirement ? vacancy.snippet.requirement : ""}</li>
-                        <li>${vacancy.snippet.responsibility ? vacancy.snippet.responsibility : ""}</li>
-                    </ul>
-                    
-                </div>
-                <a class='card-link' href="${vacancy.alternate_url}" target="_blank">
-                    Подробнее
-                </a>
-            `;
+                    <a class='card-link' href="${vacancy.alternate_url}" target="_blank">
+                        Подробнее
+                    </a>
+                `;
 
-            vacancyArray.appendChild(vacancyCard);
-        });
-    })
-    .catch(error => console.error('Ошибка:', error));
+                vacancyArray.appendChild(vacancyCard);
+            });
+        })
+        .catch(error => console.error('Ошибка:', error));
+    }
+
+    fetchVacancies();
 });

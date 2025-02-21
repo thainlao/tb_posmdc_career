@@ -8,6 +8,10 @@
     font-family: 'posmdc_font';
 }
 
+a{
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'posmdc_font';
     src: url('./assets/ALS_Ekibastuz_Extra\ Black_1.01.otf');
