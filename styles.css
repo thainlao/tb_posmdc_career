@@ -1133,7 +1133,7 @@ footer{
 
 
 /* MEDIA MEDIA MEDIA  */
-@media (max-width: 870px) {
+@media (max-width: 1200px) {
     .mainpage header{
         justify-content: center;
     }
