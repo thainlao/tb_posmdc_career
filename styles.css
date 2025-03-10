@@ -1168,6 +1168,16 @@ footer{
     .single-card {
         width: 80%;
     }
+
+    .third-page h2{
+        text-align: center;
+        max-width: 80%;
+        margin: 20px auto;
+    }
+
+    .third-page h1{
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1249,7 +1259,7 @@ footer{
     }
 
     .vacancy-card:nth-child(-n+3) {
-        display: block;
+        display: flex;
     }
 
     .video-section {
@@ -1310,6 +1320,15 @@ footer{
     .third-page {
         align-items: center;
     }
+
+    .second-text h1{
+        text-align: center;
+    }
+
+    .third-page h1{
+        text-align: center;
+    }
+
     .third-cards {
         flex-direction: column;
         align-items: center;
@@ -1324,7 +1343,6 @@ footer{
         height: 50px;
         width: 50px;
         margin-top: 20px;
-        object-fit: none !important;
     }
 
     .second-page {
