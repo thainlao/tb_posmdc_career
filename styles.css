@@ -168,7 +168,7 @@ body.no-scroll, html.no-scroll {
 .mainpage header a, .mainpage-footer a {
     text-align: center;
     white-space: nowrap;
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.5vw, 18px);
     font-weight: 400;
     font-family: Inter, sans-serif !important;
     cursor: pointer;
@@ -615,9 +615,7 @@ body.no-scroll, html.no-scroll {
     align-items: flex-start;
 }
 
-.card-text{
-    overflow: hidden;
-}
+
 
 .single-card h3{
     color: #000;
@@ -662,7 +660,8 @@ body.no-scroll, html.no-scroll {
     padding: 15px;
     width: 70px;
     height: 70px;
-    object-fit: cont1;
+    object-fit: contain;
+    margin-top: 20px;
 }
 
 /* СТИЛИ ДЛЯ ЧЕТВЕРТОЙ СТРАНИЦЫ */
@@ -761,6 +760,12 @@ body.no-scroll, html.no-scroll {
     margin-top: 46px;
     transition: all 0.5s ease-in;
     scroll-behavior: smooth;
+    user-select: none;
+    cursor: grab;
+}
+
+.feedback-cards.active{
+    cursor: grabbing;
 }
 
 .feedback-card{
@@ -781,10 +786,6 @@ body.no-scroll, html.no-scroll {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.card-info div{
-    margin-left: 20px;
 }
 
 .card-info h4{
@@ -927,6 +928,8 @@ body.no-scroll, html.no-scroll {
     margin-top: 46px;
     transition: all 0.5s ease-in;
     scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
 }
 
 .vacancy-card{
@@ -942,6 +945,10 @@ body.no-scroll, html.no-scroll {
     border: 2px solid #E9E4E4;
     background: #FFF;
     transition: all 0.5s ease;
+}
+
+.vacancy-cards.active {
+    cursor: grabbing;
 }
 
 .card-inner-text {
@@ -1053,6 +1060,7 @@ body.no-scroll, html.no-scroll {
     display: flex;
     align-items: start;
     justify-content: start;
+    user-select: none;
 }
 
 .vacancy-card li::after {
@@ -1148,7 +1156,7 @@ footer{
         bottom: 42px;
         display: flex;
         flex-direction: row;
-        gap: 32px;
+        gap: 16px;
     }
 }
 
@@ -1249,6 +1257,11 @@ footer{
 
     .card-info {
         overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
     }
 
     .feedback-card h5{
@@ -1291,6 +1304,8 @@ footer{
         align-self: end;
         height: 50px;
         width: 50px;
+        object-fit: contain;
+        margin-top: 20px;
     }
 
     .second-page {
@@ -1392,7 +1407,7 @@ footer{
         bottom: 42px;
         display: flex;
         flex-direction: row;
-        gap: 32px;
+        gap: 16px;
     }
 
     .single_box{

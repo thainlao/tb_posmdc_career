@@ -8,6 +8,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const vacancyLeftButton = document.getElementById('left_vacancy');
     const vacancyRightButton = document.getElementById('right_vacancy');
     const vacancyContainer = document.querySelector('.vacancy-cards');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    vacancyContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        vacancyContainer.classList.add('active');
+        startX = e.pageX - vacancyContainer.offsetLeft;
+        scrollLeft = vacancyContainer.scrollLeft;
+    });
+    
+    vacancyContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        vacancyContainer.classList.remove('active');
+    });
+    
+    vacancyContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        vacancyContainer.classList.remove('active');
+    });
+    
+    vacancyContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - vacancyContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Ускорение прокрутки
+        vacancyContainer.scrollLeft = scrollLeft - walk;
+    });
 
     vacancyLeftButton.addEventListener('click', () => {
         vacancyContainer.scrollBy({ left: -580, behavior: 'smooth' });
@@ -22,6 +50,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const leftButton2 = document.getElementById('left_but2');
     const rightButton2 = document.getElementById('right_but2');
     const cardsContainer = document.querySelector('.feedback-cards');
+
+    let isDownCards = false;
+    let startXCards;
+    let scrollLeftCards;
+    
+    cardsContainer.addEventListener('mousedown', (e) => {
+        isDownCards = true;
+        cardsContainer.classList.add('active');
+        startXCards = e.pageX - cardsContainer.offsetLeft;
+        scrollLeftCards = cardsContainer.scrollLeft; // Исправлено
+    });
+    
+    cardsContainer.addEventListener('mouseleave', () => {
+        isDownCards = false;
+        cardsContainer.classList.remove('active');
+    });
+    
+    cardsContainer.addEventListener('mouseup', () => {
+        isDownCards = false;
+        cardsContainer.classList.remove('active');
+    });
+    
+    cardsContainer.addEventListener('mousemove', (e) => {
+        if (!isDownCards) return;
+        e.preventDefault();
+        const x = e.pageX - cardsContainer.offsetLeft;
+        const walk = (x - startXCards) * 2; // Ускорение прокрутки
+        cardsContainer.scrollLeft = scrollLeftCards - walk; // Исправлено
+    });
+    
 
     vacancyBut.addEventListener('click', () => {
         window.location.href = "https://hh.ru/employer/5741205";
@@ -160,35 +218,39 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             vacancyArray.innerHTML = '';
             data.items.forEach(vacancy => {
+                const city = vacancy.address?.city || 'Город не указан';
+                const salary = vacancy.salary?.from ? new Intl.NumberFormat('ru-RU').format(vacancy.salary.from) : 'З/п не указана';
+    
                 const vacancyCard = document.createElement("div");
                 vacancyCard.classList.add("vacancy-card");
-
+    
                 vacancyCard.innerHTML = `
                     <div>
                         <div class='card-inner-logo'>
                             <div class='card-inner-text'>
                                 <h2>${vacancy.name}</h2>
-                                <h5>от ${new Intl.NumberFormat('ru-RU').format(vacancy.salary.from)}, ${vacancy.address.city}</h5>
+                                <h5>от ${salary}, ${city}</h5>
                             </div>
                             <a class='inner-card-a' href="${vacancy.alternate_url}" target="_blank">
                                 <img src='./assets/hhlogo.png' />
                             </a>
                         </div>
                         <ul>
-                            <li>${vacancy.snippet.requirement ? vacancy.snippet.requirement : ""}</li>
-                            <li>${vacancy.snippet.responsibility ? vacancy.snippet.responsibility : ""}</li>
+                            <li>${vacancy.snippet.requirement || ""}</li>
+                            <li>${vacancy.snippet.responsibility || ""}</li>
                         </ul>
                     </div>
                     <a class='card-link' href="${vacancy.alternate_url}" target="_blank">
                         Подробнее
                     </a>
                 `;
-
+    
                 vacancyArray.appendChild(vacancyCard);
             });
         })
         .catch(error => console.error('Ошибка:', error));
     }
-
+    
     fetchVacancies();
+    
 });
