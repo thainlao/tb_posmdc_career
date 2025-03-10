@@ -594,7 +594,6 @@ body.no-scroll, html.no-scroll {
 .third-cards {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 20px;
     margin-top: 46px;
     overflow-x: hidden;
@@ -607,7 +606,6 @@ body.no-scroll, html.no-scroll {
     background: #FFF;
     display: flex;
     padding: 28px;
-    height: 480px;
     width: 30%;
     flex-direction: column;
     padding: 28px;
@@ -756,7 +754,6 @@ body.no-scroll, html.no-scroll {
     gap: 20px;
     align-items: center;
     justify-content: start;
-    margin-left: 20px;
     margin-top: 46px;
     transition: all 0.5s ease-in;
     scroll-behavior: smooth;
@@ -786,6 +783,10 @@ body.no-scroll, html.no-scroll {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.card-text {
+    overflow: hidden;
 }
 
 .card-info h4{
@@ -1158,6 +1159,15 @@ footer{
         flex-direction: row;
         gap: 16px;
     }
+
+    .third-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-card {
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1231,6 +1241,15 @@ footer{
         width: 90%;
         min-width: auto;
         height: 480px;
+        display: none;
+    }
+
+    .card-link {
+        margin-top: 20px;
+    }
+
+    .vacancy-card:nth-child(-n+3) {
+        display: block;
     }
 
     .video-section {
@@ -1293,19 +1312,19 @@ footer{
     }
     .third-cards {
         flex-direction: column;
+        align-items: center;
     }
 
     .single-card {
         width: 80%;
-        height: 300px;
     }
 
     .single-card img{
         align-self: end;
         height: 50px;
         width: 50px;
-        object-fit: contain;
         margin-top: 20px;
+        object-fit: none !important;
     }
 
     .second-page {
